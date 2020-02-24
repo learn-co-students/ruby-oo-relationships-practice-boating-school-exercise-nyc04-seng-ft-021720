@@ -21,7 +21,7 @@ class Student
         tests = BoatingTest.all.select{|tests| tests.student == self}
         passedTests = tests.select{|tests| tests.boatingStatus == "passed"}
         failedTests = tests.select{|tests| tests.boatingStatus == "failed"}
-        percent = (passedTests.length).to_f/(failedTests.length + passedTests.length).to_f
+        percent = ((passedTests.length).to_f/(failedTests.length + passedTests.length).to_f)*100
         percent.round(2)
     end
 
