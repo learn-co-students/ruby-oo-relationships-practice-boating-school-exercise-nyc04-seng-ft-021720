@@ -20,6 +20,7 @@ class Instructor
       else
         puts 'true'
         test.boating_test_status = 'passed'
+        test
       end
   end
 
